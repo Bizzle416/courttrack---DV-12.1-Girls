@@ -275,14 +275,14 @@ table.stbl td:first-child{text-align:left;font-weight:500;}
 
 <!-- ONBOARDING OVERLAY -->
 <div class="onboard-overlay" id="onboard-overlay">
-  <div class="onboard-logo">🏀 Eltham Wildcats U12 Girls 1</div>
+  <div class="onboard-logo">🏀 Diamond Valley U12 Girls 1</div>
   <div class="onboard-sub">Stat Centre</div>
 
   <!-- PATH CHOOSER -->
   <div id="ob-path-chooser">
     <div class="onboard-section" style="text-align:center;padding:26px 16px;">
       <div style="font-size:40px;margin-bottom:10px;">🏀</div>
-      <div style="font-size:17px;font-weight:600;margin-bottom:6px;">Welcome to the Eltham Wildcats U12 Girls 1 Stat Centre</div>
+      <div style="font-size:17px;font-weight:600;margin-bottom:6px;">Welcome to the Diamond Valley U12 Girls 1 Stat Centre</div>
       <div style="font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6;">Tap below to load the squad and every game logged so far.</div>
       <button class="btn btn-primary" style="width:100%;padding:14px;font-size:15px;" onclick="quickLoadTeam()">Load our data →</button>
       <div id="ob-quickload-status" style="font-size:12px;color:var(--muted);margin-top:10px;min-height:18px;"></div>
@@ -300,7 +300,7 @@ table.stbl td:first-child{text-align:left;font-weight:500;}
     <div id="ob-auto-connect" style="display:none;">
       <div class="onboard-section" style="text-align:center;padding:20px 0;">
         <div style="font-size:40px;margin-bottom:8px;">🔗</div>
-        <div style="font-size:16px;font-weight:600;margin-bottom:6px;" id="ob-auto-team-name">Connecting to the Eltham Wildcats U12 Girls 1 Stat Centre...</div>
+        <div style="font-size:16px;font-weight:600;margin-bottom:6px;" id="ob-auto-team-name">Connecting to the Diamond Valley U12 Girls 1 Stat Centre...</div>
         <div style="font-size:13px;color:var(--muted);margin-bottom:20px;">Tap below to load your squad and season data.</div>
         <button class="btn btn-primary" style="width:100%;padding:14px;font-size:15px;" onclick="joinExistingTeam()">🏀 Connect &amp; load →</button>
       </div>
@@ -889,7 +889,7 @@ table.stbl td:first-child{text-align:left;font-weight:500;}
 // Zero hardcoded team references. All identity in state.config
 // ═══════════════════════════════════════════════════════
 
-/* BUILD:APP_KEY */ const APP_KEY = 'courttrack_eltham121';
+/* BUILD:APP_KEY */ const APP_KEY = 'courttrack_dv121';
 
 // ── CONFIG ────────────────────────────────────────────
 function defaultConfig(){return{clubName:'',teamName:'',season:'',sbUrl:'',sbKey:''};}
@@ -3640,7 +3640,7 @@ applyTheme();
     const payload=JSON.parse(atob(hash.slice(6)));
     if(!payload.u||!payload.k)return;
     // Read existing state and ONLY update credentials — never wipe players/games
-    /* BUILD:APP_KEY_BOOT */ const APP_KEY_BOOT='courttrack_eltham121';
+    /* BUILD:APP_KEY_BOOT */ const APP_KEY_BOOT='courttrack_dv121';
     let existing={};
     try{const raw=localStorage.getItem(APP_KEY_BOOT);if(raw)existing=JSON.parse(raw);}catch(e){}
     if(!existing.config)existing.config={};
@@ -3653,31 +3653,31 @@ applyTheme();
 })();
 /* BUILD:PRESEED_BLOCK */ // -- PRE-SEEDED TEAM CONFIG (build-injected) --
 (function preseed(){
-  /* BUILD:PRESEED_KEY */ var KEY = 'courttrack_eltham121';
+  /* BUILD:PRESEED_KEY */ var KEY = 'courttrack_dv121';
   try {
     var raw = localStorage.getItem(KEY);
     var existing = raw ? JSON.parse(raw) : null;
     if (!existing || !existing.players || existing.players.length === 0) {
       var seeded = {
         "config": {
-          "clubName": "Eltham Wildcats",
+          "clubName": "Diamond Valley",
           "teamName": "U12 Girls 1",
           "season": "2026",
           "sbUrl": "https://uenxuzczcwtmiuzbnoxk.supabase.co",
           "sbKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVlbnh1emN6Y3d0bWl1emJub3hrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM3MTkwMzUsImV4cCI6MjA5OTI5NTAzNX0.rsSJOZDPI7gBw6FeC7WPLwUeIZue2OD8yy8pZvz6xdY",
-          "_teamKey": "eltham_u12_girls1"
+          "_teamKey": "dv_u12_girls1"
         },
         "players": [
-          {"id":5, "num":"#5", "name":"Chloe Connelley"},
-          {"id":6, "num":"#6", "name":"Lily Collett"},
-          {"id":9, "num":"#9", "name":"Indiana Sage"},
-          {"id":11, "num":"#11", "name":"Imogen Wynd"},
-          {"id":12, "num":"#12", "name":"Kiara Carlson"},
-          {"id":14, "num":"#14", "name":"Holly Bannister"},
-          {"id":18, "num":"#18", "name":"Annabelle Liu"},
-          {"id":24, "num":"#24", "name":"Olivia Oppedisano"},
-          {"id":41, "num":"#41", "name":"Samantha Neal"},
-          {"id":43, "num":"#43", "name":"Annabella Buncic"}
+          {"id":19, "num":"#19", "name":"Kaiah Black"},
+          {"id":31, "num":"#31", "name":"Scarlett Walters"},
+          {"id":41, "num":"#41", "name":"Harper Powell"},
+          {"id":43, "num":"#43", "name":"Harper Ritchie"},
+          {"id":45, "num":"#45", "name":"Mila Dixon"},
+          {"id":53, "num":"#53", "name":"Greta Morris"},
+          {"id":55, "num":"#55", "name":"Lara Shaw"},
+          {"id":73, "num":"#73", "name":"Mackenzie Haas-Baker"},
+          {"id":75, "num":"#75", "name":"Taylah Wignell"},
+          {"id":77, "num":"#77", "name":"Billie Burrell"}
         ],
         "games": [],
         "currentGame": null,
